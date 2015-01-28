@@ -2,6 +2,13 @@
 Dockerfile and other required files to build and run a Pico CMS docker on CentOS 7.
 Pico CMS is a simple flat file CMS that does not need a database. It runs on most web servers like Apache. More info at : http://picocms.org/
 
+#Dockerhub
+
+A docker using this Dockerfile has already been published to dockerhub at :
+
+techyugadi/picocms
+
+
 # Build
 
 To build your docker using the Dockerfile in this repository :

@@ -37,4 +37,4 @@ You may use volumes to attach a web content directory or plugin directory, or ne
 
 For example, since PicoCMS serves content from the /var/www/html/content-sample directory, you can start the docker with your own web-content as follows:
 
-sudo docker run -d -v <your_content_directory>:/var/www/html/content-sample -p mapped_port:80 picocms
+sudo docker run -d -v your_content_directory:/var/www/html/content-sample -p mapped_port:80 picocms

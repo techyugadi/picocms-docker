@@ -23,7 +23,7 @@ ii. sudo docker build -t="your_user/picocms" .
 
 To run the docker, issue the follosing command :
 
-sudo docker run -d -p <mapped_port>:80 your_user/picocms
+sudo docker run -d -p mapped_port:80 your_user/picocms
 
 (Replace your_user by your user name. Map container port 80 to a suitable mapped_port on the docker host.)
 
@@ -37,4 +37,4 @@ You may use volumes to attach a web content directory or plugin directory, or ne
 
 For example, since PicoCMS serves content from the /var/www/html/content-sample directory, you can start the docker with your own web-content as follows:
 
-sudo docker run -d -v <your_content_directory>:/var/www/html/content-sample -p <mapped_port>:80 picocms
+sudo docker run -d -v <your_content_directory>:/var/www/html/content-sample -p mapped_port:80 picocms

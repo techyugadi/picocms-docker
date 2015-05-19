@@ -21,7 +21,7 @@ ii. sudo docker build -t="your_user/picocms" .
 
 # Run
 
-To run the docker, issue the follosing command :
+To run the docker, issue the following command :
 
 sudo docker run -d -p mapped_port:80 your_user/picocms
 
@@ -30,6 +30,10 @@ sudo docker run -d -p mapped_port:80 your_user/picocms
 Then connect to Pico CMS from a browser on the docker host:
 
 http://localhost:mapped_port
+
+OR, if mapped_port is accessible through the firewall:
+
+http://docker_host_IPAddress:mapped_port
 
 # Using volumes
 

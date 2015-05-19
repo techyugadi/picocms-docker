@@ -17,6 +17,8 @@ RUN unzip /pico.zip
 RUN cp -r /Pico-master/* /var/www/html/
 RUN cp /Pico-master/.htaccess /var/www/html
 RUN rm -rf /pico.zip /Pico-master
+RUN cd /var/www/html && curl -sS https://getcomposer.org/installer | php && php composer.phar install
+RUN yum -y install php-mbstring php-xml; yum clean all
 RUN yum -y remove unzip
 # Simple startup script to avoid some issues observed with container restart
 ADD run-httpd.sh /run-httpd.sh

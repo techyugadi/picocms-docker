@@ -23,14 +23,18 @@ ii. sudo docker build -t="your_user/picocms" .
 
 To run the docker, issue the follosing command :
 
-sudo docker run -d -p 80 your_user/picocms
+sudo docker run -d -p <mapped_port>:80 your_user/picocms
 
-(Replace your_user by your user name)
+(Replace your_user by your user name. Map container port 80 to a suitable mapped_port on the docker host.)
 
-This will start the docker, and map a random port number on your local machine to the port 80 on which an Apache Web server instance runs inside the docker. To find the random port number, run :
+Then connect to Pico CMS from a browser on the docker host:
 
-sudo docker ps
+http://localhost:mapped_port
 
-Then use the port number (say "port"), to connect to Pico CMS froma browser on your local machine : 
+# Using volumes
 
-http://localhost: port
+You may use volumes to attach a web content directory or plugin directory, or new configuration to the PicoCMS docker.
+
+For example, since PicoCMS serves content from the /var/www/html/content-sample directory, you can start the docker with your own web-content as follows:
+
+sudo docker run -d -v <your_content_directory>:/var/www/html/content-sample -p <mapped_port>:80 picocms
